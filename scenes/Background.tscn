@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://41hqgysc36h6"]
+
+[ext_resource type="Script" path="res://scenes/Background.gd" id="1_i2trj"]
+[ext_resource type="Texture2D" uid="uid://dglp0jlo2l35i" path="res://assets/backgrounds/Blue_Nebula_06-1024x1024.png" id="1_udjck"]
+
+[node name="Space" type="ParallaxBackground"]
+script = ExtResource("1_i2trj")
+
+[node name="StarLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(0, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="StarLayer"]
+texture_repeat = 2
+position = Vector2(360, 640)
+texture = ExtResource("1_udjck")
+region_enabled = true
+region_rect = Rect2(0, 0, 720, 1280)
