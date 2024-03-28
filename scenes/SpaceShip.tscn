@@ -8,3 +8,17 @@ script = ExtResource("1_e60um")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_nmxbu")
+
+[node name="MuzzleRight" type="Marker2D" parent="."]
+position = Vector2(31, -22)
+rotation = 3.14159
+
+[node name="MuzzleLeft" type="Marker2D" parent="."]
+position = Vector2(-33, -21)
+rotation = 3.14159
+
+[node name="FiringTimer" type="Timer" parent="."]
+wait_time = 0.15
+autostart = true
+
+[connection signal="timeout" from="FiringTimer" to="." method="_on_firing_timer_timeout"]

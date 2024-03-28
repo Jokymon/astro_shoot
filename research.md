@@ -10,3 +10,11 @@ https://asmaloney.com/2021/02/code/vertical-scrolling-parallax-backgrounds-in-go
 
 Moving the space ship using the mouse
 https://www.reddit.com/r/godot/comments/11k4e0o/moving_sprites_with_mouse_pointer/
+
+## Bullet firing
+
+General mechanics and principles
+https://kidscancode.org/godot_recipes/4.x/2d/2d_shooting/index.html
+
+Additional inspiration and some modernisation
+https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html
