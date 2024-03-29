@@ -7,6 +7,12 @@ Custom combination using these spaceship parts: https://opengameart.org/content/
 Laser shot:
 Taken from the muzzle assets on: https://opengameart.org/content/space-ship-construction-kit
 
+Title screen background generated using Bing Copilot
+"a fighter space ship flying against the viewer shooting lasers on a stars and nebula background with blue hull"
+
+Title screen GUI elements from
+https://craftpix.net/freebies/free-space-shooter-game-gui/?num=1&count=155&sq=space%20gui&pos=7
+
 ## Sounds
 
 Laser shots from sfxr.me with

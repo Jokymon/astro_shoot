@@ -11,6 +11,12 @@ https://asmaloney.com/2021/02/code/vertical-scrolling-parallax-backgrounds-in-go
 Moving the space ship using the mouse
 https://www.reddit.com/r/godot/comments/11k4e0o/moving_sprites_with_mouse_pointer/
 
+## Game organisation
+
+General structure copied together from information on
+https://gamedevartisan.com/tutorials/godot-fundamentals/ui-and-signals
+https://gamedevartisan.com/tutorials/godot-fundamentals/menus-and-scene-transitions
+
 ## Bullet firing
 
 General mechanics and principles
