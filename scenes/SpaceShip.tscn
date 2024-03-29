@@ -21,4 +21,7 @@ rotation = 3.14159
 wait_time = 0.15
 autostart = true
 
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"sound_effects"
+
 [connection signal="timeout" from="FiringTimer" to="." method="_on_firing_timer_timeout"]

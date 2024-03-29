@@ -18,3 +18,8 @@ https://kidscancode.org/godot_recipes/4.x/2d/2d_shooting/index.html
 
 Additional inspiration and some modernisation
 https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html
+
+## Playing sounds
+
+An idea for an AudioPlayer pool
+https://kidscancode.org/godot_recipes/3.x/audio/audio_manager/
