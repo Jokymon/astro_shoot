@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1pavth0w8myu"]
 
 [ext_resource type="PackedScene" uid="uid://41hqgysc36h6" path="res://scenes/Background.tscn" id="1_hdqoa"]
-[ext_resource type="Script" path="res://World.gd" id="1_mtpma"]
+[ext_resource type="Script" path="res://scripts/World.gd" id="1_mtpma"]
 [ext_resource type="PackedScene" uid="uid://b2uwdye45affq" path="res://scenes/SpaceShip.tscn" id="2_sqiei"]
 [ext_resource type="PackedScene" uid="uid://tb7q1rariqng" path="res://scenes/LaserShot.tscn" id="3_jm5aj"]
 

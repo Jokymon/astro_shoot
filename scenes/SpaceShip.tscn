@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2uwdye45affq"]
 
-[ext_resource type="Script" path="res://scenes/SpaceShip.gd" id="1_e60um"]
-[ext_resource type="Texture2D" uid="uid://clw5m7x78j5mq" path="res://assets/SpaceShip.png" id="1_nmxbu"]
+[ext_resource type="Script" path="res://scripts/SpaceShip.gd" id="1_e60um"]
+[ext_resource type="Texture2D" uid="uid://clw5m7x78j5mq" path="res://assets/graphics/SpaceShip.png" id="1_nmxbu"]
 
 [node name="SpaceShip" type="Node2D"]
 script = ExtResource("1_e60um")
