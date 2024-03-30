@@ -13,6 +13,9 @@ Title screen background generated using Bing Copilot
 Title screen GUI elements from
 https://craftpix.net/freebies/free-space-shooter-game-gui/?num=1&count=155&sq=space%20gui&pos=7
 
+Font "Ethnocentric" used on title screen in various GUI elements
+https://www.dafont.com/ethnocentric.font
+
 ## Sounds
 
 Laser shots from sfxr.me with

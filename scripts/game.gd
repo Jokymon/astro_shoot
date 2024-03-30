@@ -16,4 +16,9 @@ func _process(_delta):
 
 func _on_game_start():
 	world = WorldScene.instantiate()
+	world.quit.connect(self._on_game_quit)
 	add_child(world)
+
+func _on_game_quit():
+	world.queue_free()
+	ui.show()
