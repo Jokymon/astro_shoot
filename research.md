@@ -17,6 +17,15 @@ General structure copied together from information on
 https://gamedevartisan.com/tutorials/godot-fundamentals/ui-and-signals
 https://gamedevartisan.com/tutorials/godot-fundamentals/menus-and-scene-transitions
 
+Directly accessing a node in a hierarchy by a scene unique name:
+https://docs.godotengine.org/en/3.6/tutorials/scripting/scene_unique_nodes.html
+
+Settings singleton from information in
+https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html
+
+Use of getter/setter properties for the settings
+https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html
+
 ## Bullet firing
 
 General mechanics and principles

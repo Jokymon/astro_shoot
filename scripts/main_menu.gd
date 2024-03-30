@@ -4,8 +4,9 @@ class_name MainMenu
 signal start_game()
 
 func _ready():
+	%SoundSettingBox.set_pressed_no_signal(Settings.audio_enabled)
+
 	$BackgroundMusic.stream = load("res://assets/sounds/music/SkyFire (Title Screen).ogg")
-	@warning_ignore("standalone_expression")
 	$BackgroundMusic.play()
 
 func _process(_delta):
@@ -16,5 +17,5 @@ func _on_start_button_pressed():
 	hide()
 
 func _on_sound_setting_box_toggled(toggled_on):
-	var main_bus_index = AudioServer.get_bus_index("Master")
-	AudioServer.set_bus_mute(main_bus_index, not toggled_on)
+	Settings.audio_enabled = toggled_on
+	#Settings.save_settings()
