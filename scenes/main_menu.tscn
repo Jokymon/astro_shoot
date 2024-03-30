@@ -68,5 +68,8 @@ theme_override_constants/margin_top = 300
 layout_mode = 2
 texture_normal = ExtResource("4_184ql")
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+bus = &"music"
+
 [connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="toggled" from="TextureRect/MarginContainer/VBoxContainer/HBoxContainer2/SoundSettingBox" to="." method="_on_sound_setting_box_toggled"]
