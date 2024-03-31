@@ -15,8 +15,8 @@ func _input(_event):
 	if Input.is_key_pressed(KEY_ESCAPE):
 		quit.emit()
 		
-func _process(delta):
-	if alien != null:
+func _process(_delta):
+	if alien != null and alien.is_moving:
 		$AlienPath/AlienPathFollow.progress_ratio += 0.005
 		alien.position = %AlienSpawnPoint.global_position
 

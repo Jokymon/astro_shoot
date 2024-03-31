@@ -10,6 +10,9 @@ https://opengameart.org/content/space-game-art-pack-extended
 Laser shot:
 Taken from the muzzle assets on: https://opengameart.org/content/space-ship-construction-kit
 
+Alien ship explosion:
+Number 3 from https://opengameart.org/content/2d-explosion-animations-2-frame-by-frame
+
 Title screen background generated using Bing Copilot
 "a fighter space ship flying against the viewer shooting lasers on a stars and nebula background with blue hull"
 
