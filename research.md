@@ -34,6 +34,17 @@ https://kidscancode.org/godot_recipes/4.x/2d/2d_shooting/index.html
 Additional inspiration and some modernisation
 https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html
 
+## Alien movement
+
+The alien could be made a child of a `PathFollow2D` and then `progress_ratio` could
+be simply updated according to the alien movement speed. The problem with this
+approach is that the alien then is also rotated, even when the `rotates` property
+of the `PathFollow2D` is `false`. The alien is still rotated at least once at
+the very beginning.
+I solved this by just attaching a `Marker2D` to the `PathFollow2D` and then
+just continuously updating the alien ships position with the `global_position`
+of the marker after `progress_ratio` is updated.
+
 ## Playing sounds
 
 Implementation of the audio player pool according to

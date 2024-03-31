@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1pavth0w8myu"]
+[gd_scene load_steps=7 format=3 uid="uid://c1pavth0w8myu"]
 
 [ext_resource type="PackedScene" uid="uid://41hqgysc36h6" path="res://scenes/Background.tscn" id="1_hdqoa"]
 [ext_resource type="Script" path="res://scripts/World.gd" id="1_mtpma"]
 [ext_resource type="PackedScene" uid="uid://bbqit8s8s6g7j" path="res://scenes/alien_small.tscn" id="2_opbhc"]
 [ext_resource type="PackedScene" uid="uid://b2uwdye45affq" path="res://scenes/SpaceShip.tscn" id="2_sqiei"]
 [ext_resource type="PackedScene" uid="uid://tb7q1rariqng" path="res://scenes/LaserShot.tscn" id="3_jm5aj"]
+
+[sub_resource type="Curve2D" id="Curve2D_2xikd"]
+_data = {
+"points": PackedVector2Array(43.776, -98.7767, -43.776, 98.7767, 87, 199, -68.4702, -17.9594, 68.4702, 17.9594, 254, 428, -10.1022, 74.0825, 10.1022, -74.0825, 586, 319, 44.8985, 0, -44.8985, 0, 497, 79, 40.4086, 5.61231, -40.4086, -5.61231, 381, 178, 70.7151, 1.12246, -70.7151, -1.12246, 260, 94, 17.9594, -58.368, -17.9594, 58.368, 87, 199)
+}
+point_count = 7
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_mtpma")
@@ -16,11 +22,21 @@ alien_scene = ExtResource("2_opbhc")
 position = Vector2(350, 1164)
 projectile = ExtResource("3_jm5aj")
 
-[node name="AlienSpawn" type="Marker2D" parent="."]
-position = Vector2(131, 249)
-
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 0.316
 one_shot = true
+
+[node name="AlienPath" type="Path2D" parent="."]
+position = Vector2(35, 47)
+curve = SubResource("Curve2D_2xikd")
+
+[node name="AlienPathFollow" type="PathFollow2D" parent="AlienPath"]
+position = Vector2(87, 199)
+rotation = 1.98797
+rotates = false
+
+[node name="AlienSpawnPoint" type="Marker2D" parent="AlienPath/AlienPathFollow"]
+unique_name_in_owner = true
+rotation = -1.98797
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
