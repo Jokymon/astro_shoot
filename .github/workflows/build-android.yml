@@ -1,5 +1,7 @@
 name: Android build
 
+on: push
+
 env:
     GODOT_VERSION: 4.2.1
 
