@@ -4,6 +4,7 @@ on: push
 
 env:
     GODOT_VERSION: 4.2.1
+    WORKING_DIRECTORY: .
 
 jobs:
     build:
@@ -19,7 +20,7 @@ jobs:
 
             - name: Create export_presets.cfg and inject values
               run: |
-                cp export_presets.android.example export_presets.cfg
+                cp $WORKING_DIRECTORY/export_presets.android.example $WORKING_DIRECTORY/export_presets.cfg
                 sed -i "s|VERSION_CODE|$VERSION_CODE|g" $WORKING_DIRECTORY/export_presets.cfg
                 sed -i "s|VERSION_NAME|$VERSION_NAME|g" $WORKING_DIRECTORY/export_presets.cfg
 
