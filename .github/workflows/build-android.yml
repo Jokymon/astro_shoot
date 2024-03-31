@@ -24,7 +24,7 @@ jobs:
                 sed -i "s|VERSION_NAME|$VERSION_NAME|g" $WORKING_DIRECTORY/export_presets.cfg
 
             - name: Godot Android export
-              uses: dulvui/godot-android-export@4.0.0
+              uses: dulvui/godot-android-export@v4.0.0
               with:
                 working-directory: $WORKING_DIRECTORY
                 godot-version: ${{ env.GODOT_VERSION }}
