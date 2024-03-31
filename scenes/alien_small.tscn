@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbqit8s8s6g7j"]
+
+[ext_resource type="Texture2D" uid="uid://dggofr7vht3xb" path="res://assets/graphics/small_alien.png" id="1_7bobu"]
+[ext_resource type="Script" path="res://scripts/alien_small.gd" id="1_y8jun"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5hg"]
+size = Vector2(60, 48)
+
+[node name="AlienSmall" type="Area2D"]
+script = ExtResource("1_y8jun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -3.14159
+texture = ExtResource("1_7bobu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 26)
+shape = SubResource("RectangleShape2D_1q5hg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
