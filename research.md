@@ -36,5 +36,5 @@ https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main
 
 ## Playing sounds
 
-An idea for an AudioPlayer pool
+Implementation of the audio player pool according to
 https://kidscancode.org/godot_recipes/3.x/audio/audio_manager/

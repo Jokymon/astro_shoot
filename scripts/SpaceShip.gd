@@ -16,8 +16,7 @@ func _on_firing_timer_timeout():
 	proj_right.transform = $MuzzleRight.global_transform
 	proj_right.rotation = $MuzzleRight.rotation
 	owner.add_child(proj_right)
-	$AudioPlayer.stream = load("res://assets/sounds/effects/laserShoot.wav")
-	$AudioPlayer.play()
+	AudioPlayerPool.play("res://assets/sounds/effects/laserShoot.wav")
 
 	var proj_left = projectile.instantiate()
 	proj_left.transform = $MuzzleLeft.global_transform
