@@ -23,6 +23,8 @@ jobs:
                 cp $WORKING_DIRECTORY/export_presets.android.example $WORKING_DIRECTORY/export_presets.cfg
                 sed -i "s|VERSION_CODE|$VERSION_CODE|g" $WORKING_DIRECTORY/export_presets.cfg
                 sed -i "s|VERSION_NAME|$VERSION_NAME|g" $WORKING_DIRECTORY/export_presets.cfg
+                mkdir -p .godot/editor
+                mkdir -p .godot/imported
 
             - name: Godot Android export
               uses: dulvui/godot-android-export@v4.0.0
