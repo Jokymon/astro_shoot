@@ -18,6 +18,10 @@ jobs:
                 echo "VERSION_NAME=$(cat version | cut -f1 -d-)" >> $GITHUB_ENV
                 echo "VERSION_CODE=$(cat version | cut -f2 -d-)" >> $GITHUB_ENV
 
+            - name: Create keystores
+              run: |
+                keytool -keyalg RSA -genkeypair -alias androiddebugkey -keypass android -keystore debug.keystore -storepass android -dname "CN=Android Debug,O=Android,C=US" -validity 9999 -deststoretype pkcs12
+
             - name: Create export_presets.cfg and inject values
               run: |
                 cp $WORKING_DIRECTORY/export_presets.android.example $WORKING_DIRECTORY/export_presets.cfg
@@ -25,6 +29,13 @@ jobs:
                 sed -i "s|VERSION_NAME|$VERSION_NAME|g" $WORKING_DIRECTORY/export_presets.cfg
                 mkdir -p .godot/editor
                 mkdir -p .godot/imported
+
+            - name: Create export_credentials.cfg and inject values
+              run: |
+                cp $WORKING_DIRECTORY/export_credentials.android.example $WORKING_DIRECTORY/.godot/export_credentials.cfg
+                sed -i "s|KEYSTORE_DEBUG_PATH|$GITHUB_WORKSPACE/debug.keystore|g" $WORKING_DIRECTORY/.godot/export_credentials.cfg
+                sed -i "s|ANDROID_KEYSTORE_ALIAS|androiddebugkey|g" $WORKING_DIRECTORY/.godot/export_credentials.cfg
+                sed -i "s|ANDROID_KEYSTORE_PASSWORD|android|g" $WORKING_DIRECTORY/.godot/export_credentials.cfg
 
             - name: Godot Android export
               uses: dulvui/godot-android-export@v4.0.1
@@ -36,7 +47,8 @@ jobs:
               run: |
                 wget -q https://github.com/google/bundletool/releases/download/1.14.0/bundletool-all-1.14.0.jar
                 java -jar bundletool-all-1.14.0.jar build-apks --bundle=AstroShoot.aab --output=AstroShoot.apks \
-                --mode=universal
+                    --ks=debug.keystore --ks-pass=pass:"android" --ks-key-alias="androiddebugkey" \
+                    --key-pass=pass:"android" --mode=universal
                 unzip -p AstroShoot.apks universal.apk > AstroShoot.apk
 
             - name: Upload binaries to Github release
