@@ -27,7 +27,7 @@ jobs:
                 mkdir -p .godot/imported
 
             - name: Godot Android export
-              uses: Jokymon/godot-android-export@v4.0.3
+              uses: Jokymon/godot-android-export@v4.0.4
               with:
                 working-directory: $WORKING_DIRECTORY
                 godot-version: ${{ env.GODOT_VERSION }}
