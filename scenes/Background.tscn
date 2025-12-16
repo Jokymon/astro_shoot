@@ -7,7 +7,7 @@
 script = ExtResource("1_i2trj")
 
 [node name="StarLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(0, 1024)
+motion_offset = Vector2(0, -1280)
 
 [node name="Sprite2D" type="Sprite2D" parent="StarLayer"]
 texture_repeat = 2
